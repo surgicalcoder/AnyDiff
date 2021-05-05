@@ -37,6 +37,10 @@
     <PackageReference Include="TypeSupport" Version="1.1.4" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Esfa.Shared\Esfa.Shared.csproj" />
+  </ItemGroup>
+
   <Target Name="ILRepack" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' AND '$(TargetFramework)' != ''">
     <PropertyGroup>
       <WorkingDirectory>$(OutputPath)</WorkingDirectory>
