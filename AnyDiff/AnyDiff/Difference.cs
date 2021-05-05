@@ -43,6 +43,7 @@ namespace AnyDiff
             };
 
         public string Path { get; }
+        public string CsPath { get; }
         public string Property { get; }
         public int? ArrayIndex { get; }
         public Type PropertyType { get; }
@@ -59,7 +60,7 @@ namespace AnyDiff
         /// <param name="leftValue"></param>
         /// <param name="rightValue"></param>
         /// <param name="converter"></param>
-        public Difference(Type propertyType, string property, string path, object leftValue, object rightValue, TypeConverter converter)
+        public Difference(Type propertyType, string property, string path, string csPath, object leftValue, object rightValue, TypeConverter converter)
         {
             PropertyType = propertyType;
             if (Nullable.GetUnderlyingType(propertyType) == null && (leftValue == null || rightValue == null))
@@ -69,6 +70,7 @@ namespace AnyDiff
                 PropertyType = GetNullableType(propertyType);
             }
             Path = path;
+            CsPath = csPath;
             Property = property;
             LeftValue = leftValue;
             RightValue = rightValue;
@@ -106,7 +108,7 @@ namespace AnyDiff
         /// <param name="leftValue"></param>
         /// <param name="rightValue"></param>
         /// <param name="converter"></param>
-        public Difference(Type propertyType, string property, string path, int arrayIndex, object leftValue, object rightValue) : this(propertyType, property, path, leftValue, rightValue, null)
+        public Difference(Type propertyType, string property, string path, string csPath, int arrayIndex, object leftValue, object rightValue) : this(propertyType, property, path, csPath, leftValue, rightValue, null)
         {
             ArrayIndex = arrayIndex;
         }
@@ -121,7 +123,7 @@ namespace AnyDiff
         /// <param name="leftValue"></param>
         /// <param name="rightValue"></param>
         /// <param name="converter"></param>
-        public Difference(Type propertyType, string property, string path, int arrayIndex, object leftValue, object rightValue, TypeConverter converter) : this(propertyType, property, path, leftValue, rightValue, converter)
+        public Difference(Type propertyType, string property, string path, string csPath, int arrayIndex, object leftValue, object rightValue, TypeConverter converter) : this(propertyType, property, path, csPath, leftValue, rightValue, converter)
         {
             ArrayIndex = arrayIndex;
         }
