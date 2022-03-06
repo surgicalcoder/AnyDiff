@@ -17,8 +17,7 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>AnyDiffKey.pfx</AssemblyOriginatorKeyFile>
+    <SignAssembly>False</SignAssembly>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
