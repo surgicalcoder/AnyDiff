@@ -7,7 +7,7 @@
     <Authors>Michael Brown</Authors>
     <Company>Refactor Software</Company>
     <Description>A CSharp library that allows you to diff two objects and get a list of the differences back.</Description>
-    <RepositoryUrl>https://github.com/replaysMike/AnyDiff</RepositoryUrl>
+    <RepositoryUrl>https://github.com/MohammadHadi2031/AnyDiff.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/replaysMike/AnyDiff</PackageProjectUrl>
     <PackageTags>diff compare objects difference difference-generator dotnet-standard refactor software michael brown</PackageTags>
     <PackageReleaseNotes>A CSharp library that allows you to diff two objects and get a list of the differences back.</PackageReleaseNotes>
@@ -22,9 +22,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Esfa.Shared" Version="1.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
-
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0' OR '$(TargetFramework)'=='net45' OR '$(TargetFramework)'=='net46' OR '$(TargetFramework)'=='net461' OR '$(TargetFramework)'=='net462'">
     <DefineConstants>FEATURE_CUSTOM_ATTRIBUTES;FEATURE_CUSTOM_TYPEINFO;FEATURE_GETMETHOD;FEATURE_SETVALUE;FEATURE_TASK;FEATURE_ASSEMBLYBUILDER</DefineConstants>
@@ -37,10 +37,6 @@
   <ItemGroup>
     <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" PrivateAssets="all" />
     <PackageReference Include="TypeSupport" Version="1.1.4" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Esfa.Shared\Esfa.Shared.csproj" />
   </ItemGroup>
 
   <Target Name="ILRepack" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' AND '$(TargetFramework)' != ''">
