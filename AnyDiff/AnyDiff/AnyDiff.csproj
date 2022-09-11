@@ -19,6 +19,8 @@
     <SignAssembly>False</SignAssembly>
     <DelaySign>false</DelaySign>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
