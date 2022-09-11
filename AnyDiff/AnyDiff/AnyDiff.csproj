@@ -1,14 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net40;net45;net46;net461;net462;net47;net48</TargetFrameworks>
-    <Product>AnyDiff</Product>
-    <ProductName>AnyDiff</ProductName>
-    <Authors>Michael Brown</Authors>
-    <Company>Refactor Software</Company>
+    <Product>GoLive.AnyDiff</Product>
+    <ProductName>GoLive.AnyDiff</ProductName>
+    <PackageId>GoLive.AnyDiff</PackageId>
+    <Authors>SurgicalCoder; Michael Brown</Authors>
     <Description>A CSharp library that allows you to diff two objects and get a list of the differences back.</Description>
-    <RepositoryUrl>https://github.com/MohammadHadi2031/AnyDiff.git</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/replaysMike/AnyDiff</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/surgicalcoder/AnyDiff.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/surgicalcoder/AnyDiff</PackageProjectUrl>
     <PackageTags>diff compare objects difference difference-generator dotnet-standard refactor software michael brown</PackageTags>
     <PackageReleaseNotes>A CSharp library that allows you to diff two objects and get a list of the differences back.</PackageReleaseNotes>
     <Version>1.0.0</Version>
@@ -19,11 +18,11 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <SignAssembly>False</SignAssembly>
     <DelaySign>false</DelaySign>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Esfa.Shared" Version="1.0.0" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0' OR '$(TargetFramework)'=='net45' OR '$(TargetFramework)'=='net46' OR '$(TargetFramework)'=='net461' OR '$(TargetFramework)'=='net462'">
@@ -36,7 +35,7 @@
 
   <ItemGroup>
     <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" PrivateAssets="all" />
-    <PackageReference Include="TypeSupport" Version="1.1.4" PrivateAssets="all" />
+    <PackageReference Include="TypeSupport" Version="1.1.12" PrivateAssets="all" />
   </ItemGroup>
 
   <Target Name="ILRepack" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' AND '$(TargetFramework)' != ''">
