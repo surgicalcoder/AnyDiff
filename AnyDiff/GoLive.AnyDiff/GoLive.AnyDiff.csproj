@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Product>GoLive.AnyDiff</Product>
+    <ProductName>GoLive.AnyDiff</ProductName>
+    <PackageId>GoLive.AnyDiff</PackageId>
+    <Authors>SurgicalCoder; Michael Brown</Authors>
+    <Description>A CSharp library that allows you to diff two objects and get a list of the differences back.</Description>
+    <RepositoryUrl>https://github.com/surgicalcoder/AnyDiff.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/surgicalcoder/AnyDiff</PackageProjectUrl>
+    <PackageTags>diff compare objects difference difference-generator dotnet-standard refactor software michael brown</PackageTags>
+    <PackageReleaseNotes>A CSharp library that allows you to diff two objects and get a list of the differences back.</PackageReleaseNotes>
+    <Version>1.0.0</Version>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackOnBuild>true</PackOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>GoLive.AnyDiff</AssemblyName>
+    <RootNamespace>GoLive.AnyDiff</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="TypeSupport" Version="1.1.12"/>
+  </ItemGroup>
+
+
+</Project>
